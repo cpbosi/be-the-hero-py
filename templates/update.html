@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>CRUD for Dummies</title>
+{% endblock %}
+
+{% block body %}
+<div class="form">
+    <h1>Update ONG</h1>
+    <form action="/update/{{ong.id }}" method="POST">
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="name" id="name" value="{{ong.name}}"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="email" id="email" value="{{ong.email}}"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Update ONG">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+{% endblock %}
